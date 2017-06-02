@@ -1,4 +1,7 @@
-
+import {existy , thruty} from 'utils/conditions.utils';
+import { multiply } from 'utils/multiply.utils';
+import Student from 'entities/student';
+import Classroom from 'entities/classroom';
 
 /**
  * Opdracht 1: imports
@@ -7,6 +10,12 @@
  * Maak een object aan en check via existy() of hij bestaat
  * Maak een variabele aan maar geef hem nog geen vulling. Console.log() wat existy() teruggeeft
  */
+let country = 'Spain';
+console.log(existy(country));
+
+let numberOne = 5;
+
+console.log(multiply(numberOne));
 
 /**
  * Opdracht 2: exports
@@ -25,16 +34,25 @@
  * Beantwoord de volgende vragen
  */
 console.log('Wat is de prototype chain van een student?',
-            'jouw antwoord');
+            'naam, achternaam en dan leeftijd');
 
 console.log('Kan je na het aanmaken van een student nog bij zijn leeftijd?',
-            'jouw antwoord');
+            'Ja maar dan zou je niet .getFullName() erachter moeten zetten');
 
 /**
  * Opdracht 4: Student Class
  *
  * Console.log() de fullNames van je 3 aangemaakte studenten
  */
+let student1 = new Student('Jay', 'vd Horst', '18');
+
+console.log(student1.getFullName());
+
+let classroom1 = new Classroom;
+
+console.log(classroom1.addStudent(student1));
+
+
 
 /**
  * Opdracht 5: Custom class
